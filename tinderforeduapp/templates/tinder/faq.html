@@ -1,0 +1,130 @@
+<!doctype html> {% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  <title>How to use Match and Learn</title>
+</head>
+<body>
+<header class="cd-header flex flex-column flex-center">
+  <div class="text-component text-center">
+    <h1>How to use Match and Learn</h1>
+	<div style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"
+ 		unselectable="on"
+ 		onselectstart="return false;"
+ 		onmousedown="return false;">
+    	<p><a onclick="history.back()">Go back</a></p>
+	</div>
+	  <a href="{% url 'tinder:home' %}">Go to Home</a>
+  </div>
+</header>
+
+<section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
+	<ul class="cd-faq__categories">
+		<li><a class="cd-faq__category cd-faq__category-selected truncate" href="#basics">พื้นฐาน</a></li>
+		<li><a class="cd-faq__category truncate" href="#match">การใช้งานระบบ Match</a></li>
+		<li><a class="cd-faq__category truncate" href="#chat">การใช้งานระบบ Chat</a></li>
+	</ul> <!-- cd-faq__categories -->
+
+	<div class="cd-faq__items">
+		<ul id="basics" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>พื้นฐาน</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ฉันจะสามารถสมัครสมาชิก Match and Learn ได้อย่างไร</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>ในการสมัคสมาชิก ให้คุณเลือก New to Match and Learn? Sign up now! จากนั้นทำการกรอกข้อมูลต่างๆ แล้วกด Sign up จากนั้นให้คุณไปที่ Email ที่คุณได้สมัครไว้ เพื่อทำการยืนยันการสมัครสมาชิก ทั้งนี้ คุณสามารถใช้ Continue with Facebook ในการสมัครสมาชิกได้ทันที</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ฉันจะสามารถเข้าสู่ระบบได้อย่างไร</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>ในการเข้าสู่ระบบ ให้คุณกรอก Username และ Password ที่ใช้ในการสมัครสมาชิก จากนั้นกด Log in ในกรณีที่คุณสมัครสมาชิกด้วย Facebook คุณสามารถกด Continue with Facebook ได้เลย โปรดจำไว้ว่า ถ้าหากว่าคุณสมัครสมาชิกด้วย Facebook คุณจะต้อง Login ด้วยปุ่ม Continue with Facebook เท่านั้น</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ฉันลืมรหัสผ่าน จะทำอย่างไรดี</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>หากคุณลืมรหัสผ่าน ให้คุณกด Forgot password? ที่หน้า Login จากนั้นใส่ Email ที่ได้ทำการสมัครสมาชิกไว้ ถ้าหากว่าระบบตรวจพบ User ที่สมัครผ่าน Email ที่กรอกเข้ามา ระบบ จะส่งลิ้งค์กู้คืนรหัสผ่านไปให้ทาง Email ให้คุณคลิกที่ลิ้งค์นั้น เพื่อทำการเปลี่ยนรหัสผ่าน</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ฉันไม่ได้ทำการสมัครสมาชิกด้วย Facebook ฉันจะสามารถใช้ปุ่ม Continue with Facebook ได้หรือไม่</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>สามารถทำได้ ในการกด Continue with Facebook ถ้าระบบตรวจพบว่า Email ของบัญชี Facebook ของคุณ ตรงกับ Email ของ User ที่เคยสมัครเอาไว้ ระบบ จะทำการ Log in User นั้นให้โดยอัตโนมัต</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="match" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>การใช้งานระบบ Match</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ฉันจะค้นหา Tutor ได้อย่างไร</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>คุณสามารถค้นหา Tutor ที่จะสามารถสอนคุณได้โดยการระบุวิชาที่คุณต้องการจะหา Tutor ลงในช่อง Enter a Subject ที่หน้า Home และระบบจะทำการแสดง User ทั้งหมดที่ระบุวิชาที่คุณค้นหาเป็นวิชาที่ถนัด</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ฉันค้นหาเจอ Tutor ที่ฉันต้องการจะ Match แล้ว ฉันต้องทำอย่างไรต่อ</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>เมื่อคุณค้นหาจนเจอ Tutor ที่คุณต้องการจะ Match ด้วยแล้ว ให้คุณไปที่หน้า Profile ของ Tutor คนนั้น และกดปุ่ม Match ระบบ จะทำการแจ้งเตือนไปยัง User คนที่คุณกด Match ว่าคุณต้องการที่จะ Match กับเขา/เธอ</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ฉันจะดู Profile ของตัวเองได้อย่างไร</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>ในการดู Profile ของตัวเอง ให้คุณคลิกที่ Profile : (ชื่อจริงของคุณ) จากนั้นคุณจะสามารถตรวจสอบ Profile ของคุณ ในหน้านี้ คุณสามารถที่จะเพิ่ม หรือ ลบ วิชาที่ถนัดได้ และยังสามารถแก้ไข Profile ในส่วนอื่นๆ ได้อีกด้วย</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>มีคนขอ Match ฉันมา ฉันจะต้องทำอย่างไรต่อ</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>เมื่อมีคน Request Match มา คุณจะได้รับการแจ้งเตือนที่แถบด้านบน คุณสามารถคลิกเข้าไปเพื่อตรวจสอบว่า User คนใดเป้นคนส่ง Request มา เมื่อคุณเข้าไปในหน้า Profile ของคุณที่ส่ง Request มาแล้ว คุณสามารถเลือกได้ว่าคุณจะยอมรับคำขอ (Accept) หรือปฏิเสธคำขอ (Decline) ในกรณีที่คุณยอมรับคำขอ User ที่ส่ง Request มา จะถือว่าเป็น Student และคุณจะเป็น Tutor ของ User ที่ส่ง Request มาทันที</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="account" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>การใช้งานระบบ Chat</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ฉัน Match กับ Tutor/Student ของฉันแล้ว ฉันจะคุยกับอีก User นึงได้อย่างไร</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>เมื่อคุณต้องการที่จะใช้ระบบ Chat ให้คุณคลิกที่หัวข้อ Chat ที่แถบด้านบน จากนั้นในหน้า Chat ระบบจะแสดงรายชื่อของ User ที่คุณสมารถที่จะ Chat ด้วยได้ โดยรวมทั้ง Tutor และ Student โดยเมื่อคุณคลิกที่ User ที่ต้องการ ระบบจะพาไปยังหน้า Chat ทันที</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+	</div> <!-- cd-faq__items -->
+
+	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
+  
+  <div class="cd-faq__overlay" aria-hidden="true"></div>
+</section> <!-- cd-faq -->
+<script src="{% static 'js/util.js'%}"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>
